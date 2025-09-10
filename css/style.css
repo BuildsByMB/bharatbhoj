@@ -1,0 +1,369 @@
+/******************************/
+/*           HEADER           */
+/******************************/
+
+.header-hero {
+  background-image: linear-gradient(to right, #f25151f0 45%, #f25151f0 45%),
+    url("../img/header-hero-background.jpg");
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Because we want header to be sticky later */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  position: relative;
+}
+
+.logo {
+  height: 2.8rem;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  font-family: Lobster;
+  /* color: #ffd8a8; */
+  color: #ffc9c9;
+  font-weight: 500;
+  font-size: 3.2rem;
+}
+
+/******************************/
+/*         NAVIGATION         */
+/******************************/
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffe3e3;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #ffc9c9;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #ffe3e3;
+  background-color: #e03131;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #c92a2a;
+  box-shadow: 0 1.8rem 2.4rem #ff000059;
+  transform: translateY(-0.1rem);
+  transition: all 0.2s;
+}
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #ffe3e3;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+/******************************/
+/*        HERO SECTION        */
+/******************************/
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+.section-hero {
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0rem auto;
+  padding: 0 3.2rem;
+  gap: 9.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.heading-primary {
+  /* color: #eee; */
+  color: #ffe3e3;
+}
+
+.hero-description {
+  color: #ffe3e3;
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 7%;
+}
+/******************************/
+/*        ABOUT SECTION       */
+/******************************/
+.section-about {
+  padding: 9.6rem 0;
+}
+
+.heading-secondary {
+  margin-bottom: 0rem;
+}
+
+.about-text {
+  display: flex;
+  align-items: center;
+}
+
+.about-description {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.about-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-img-box::before,
+.about-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 10px;
+  position: absolute;
+  /* transform: rotate(45deg); */
+}
+
+.about-img-box::before {
+  width: 60%;
+  height: 60%;
+  padding: 10% 10%;
+  background-color: #f57474;
+  z-index: -2;
+}
+
+.about-img {
+  width: 70%;
+  border-radius: 10px;
+}
+
+/******************************/
+/*       MEALS SECTION        */
+/******************************/
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.grid--3-cols {
+  align-items: center;
+  justify-items: center;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  justify-self: end;
+  border: 0.02rem solid #ffc9c9;
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+  margin-top: 6.4rem;
+}
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem #ffc9c98b;
+}
+
+.meal-content {
+  padding: 4.4rem 6.4rem 4.4rem 5.8rem;
+}
+
+.plan-header {
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #c92a2a;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e03131;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/******************************/
+/*       FOOTER SECTION       */
+/******************************/
+
+.footer {
+  padding: 7rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid-footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
